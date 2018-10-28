@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B2C43CC-59F2-415C-8DF0-FADC07536F9F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HelperTools</RootNamespace>
+    <AssemblyName>HelperTools</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Itenso.TimePeriod, Version=2.1.1.0, Culture=neutral, PublicKeyToken=8cb6db75b4e81486, processorArchitecture=MSIL">
+      <HintPath>..\..\TCAV\packages\TimePeriodLibrary.NET.2.1.1\lib\net45\Itenso.TimePeriod.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\CultureInfoAttribute.cs" />
+    <Compile Include="Collections\DictionaryByType.cs" />
+    <Compile Include="Collections\Extensions\ComparerExt.cs" />
+    <Compile Include="Collections\Extensions\DictionaryExt.cs" />
+    <Compile Include="Collections\Extensions\RangeBasedExt.cs" />
+    <Compile Include="Collections\Extensions\SmartEnumerableExt.cs" />
+    <Compile Include="Collections\LinkedComparer.cs" />
+    <Compile Include="Collections\ProjectionComparer.cs" />
+    <Compile Include="Collections\ProjectionEqualityComparer.cs" />
+    <Compile Include="Collections\Range.cs" />
+    <Compile Include="Collections\RangeIterator.cs" />
+    <Compile Include="Collections\ReverseComparer.cs" />
+    <Compile Include="Collections\SmartEnumerable.cs" />
+    <Compile Include="Enumerations\DateTimeFormat.cs" />
+    <Compile Include="Enumerations\EnumDirection.cs" />
+    <Compile Include="Enumerations\EnumEditMode.cs" />
+    <Compile Include="Helpers\DateTimeHelpers\Holidays.cs" />
+    <Compile Include="Helpers\Range\DateRange.cs" />
+    <Compile Include="Helpers\DateTimeHelpers\DayHelper.cs" />
+    <Compile Include="Helpers\Range\IRange.cs" />
+    <Compile Include="Helpers\DateTimeHelpers\MonthHelper.cs" />
+    <Compile Include="Helpers\DateTimeHelpers\YearHelper.cs" />
+    <Compile Include="Helpers\DateTimeHelpers\AgeHelper.cs" />
+    <Compile Include="Helpers\DateTimeHelpers\WeekHelper.cs" />
+    <Compile Include="Helpers\DateTimeHelpers\TimeHelper.cs" />
+    <Compile Include="Interfaces\IPathStructure.cs" />
+    <Compile Include="MathExtenions\Fraction\FractionHelper.cs" />
+    <Compile Include="MathExtenions\Fraction\Fraction.cs" />
+    <Compile Include="Text\CaseFormatType.cs" />
+    <Compile Include="Enumerations\RangeBoundaryType.cs" />
+    <Compile Include="Enumerations\Weekday.cs" />
+    <Compile Include="Helpers\CachedBuffer.cs" />
+    <Compile Include="CSharp\EventArgs.cs" />
+    <Compile Include="Extensions\ArrayExt.cs" />
+    <Compile Include="Extensions\DateTimeBasedExt.cs" />
+    <Compile Include="Extensions\LinqExt.cs" />
+    <Compile Include="Extensions\ReferenceExt.cs" />
+    <Compile Include="Extensions\TimeSpanBasedExt.cs" />
+    <Compile Include="Generics\ExpressionUtil.cs" />
+    <Compile Include="Generics\GenericMath.cs" />
+    <Compile Include="Generics\NonNullable.cs" />
+    <Compile Include="Generics\NullOp.cs" />
+    <Compile Include="Generics\Operator.cs" />
+    <Compile Include="Helpers\CoalesceHelper.cs" />
+    <Compile Include="Helpers\ConsecutiveHelper.cs" />
+    <Compile Include="Helpers\BooleanHelper.cs" />
+    <Compile Include="Helpers\IBuffer.cs" />
+    <Compile Include="Helpers\IBufferManager.cs" />
+    <Compile Include="Helpers\JoinHelper.cs" />
+    <Compile Include="Normalizations\NumberFormatting.cs" />
+    <Compile Include="Helpers\NumberHelper.cs" />
+    <Compile Include="Helpers\Range\RangeHelper.cs" />
+    <Compile Include="Text\LineHelper.cs" />
+    <Compile Include="Text\StringValidation.cs" />
+    <Compile Include="Linq\DataProducer.cs" />
+    <Compile Include="Linq\EditableLookup.cs" />
+    <Compile Include="Linq\EditableLookup.LookupGrouping.cs" />
+    <Compile Include="Linq\Extensions\DataProducerExt.Conversion.cs" />
+    <Compile Include="Linq\Extensions\DataProducerExt.cs" />
+    <Compile Include="Linq\Extensions\DataProducerExt.Grouping.cs" />
+    <Compile Include="Linq\Extensions\DataProducerExt.Math.cs" />
+    <Compile Include="Linq\Extensions\DataProducerExt.Pipeline.cs" />
+    <Compile Include="Linq\Extensions\DataProducerExt.SingleReturn.cs" />
+    <Compile Include="Linq\Extensions\EnumerableExt.cs" />
+    <Compile Include="Linq\Extensions\ListExt.cs" />
+    <Compile Include="Linq\Extensions\TypeExt.cs" />
+    <Compile Include="Linq\Future.cs" />
+    <Compile Include="Linq\FutureProxy.cs" />
+    <Compile Include="Linq\Interfaces\IDataProducer.cs" />
+    <Compile Include="Linq\Interfaces\IFuture.cs" />
+    <Compile Include="Linq\Interfaces\IOrderedDataProducer.cs" />
+    <Compile Include="Linq\Interfaces\IProducerGrouping.cs" />
+    <Compile Include="Linq\KeyValueTuple.cs" />
+    <Compile Include="Linq\OrderedDataProducer.cs" />
+    <Compile Include="Linq\ProducerGrouping.cs" />
+    <Compile Include="Collections\PercentageRange.cs" />
+    <Compile Include="Enumerations\TimeUnit.cs" />
+    <Compile Include="Extensions\BooleanExt.cs" />
+    <Compile Include="Extensions\ColorExt.cs" />
+    <Compile Include="Extensions\ColorHelper.cs" />
+    <Compile Include="Helpers\DataHelper.cs" />
+    <Compile Include="Helpers\DateTimeHelpers\DateTimeExt.cs" />
+    <Compile Include="Extensions\EnumExt.cs" />
+    <Compile Include="Extensions\ExceptionExt.cs" />
+    <Compile Include="Extensions\IEnumerableExt.cs" />
+    <Compile Include="Extensions\ListExt.cs" />
+    <Compile Include="MathExtenions\MathExt.cs" />
+    <Compile Include="MathExtenions\CeilingExt.cs" />
+    <Compile Include="MathExtenions\AdditionExt.cs" />
+    <Compile Include="MathExtenions\SubtractionExt.cs" />
+    <Compile Include="MathExtenions\CompareExt.cs" />
+    <Compile Include="Extensions\NameValueExt.cs" />
+    <Compile Include="Extensions\ObjectExt.cs" />
+    <Compile Include="Extensions\StringExt.cs" />
+    <Compile Include="Extensions\SwitchExt.cs" />
+    <Compile Include="Extensions\TimerExt.cs" />
+    <Compile Include="Extensions\TimeSpanExt.cs" />
+    <Compile Include="CSharp\TypeExt.cs" />
+    <Compile Include="CSharp\AttributeHelper.cs" />
+    <Compile Include="CSharp\ClassHelper.cs" />
+    <Compile Include="Crypto\CryptographyHelper.cs" />
+    <Compile Include="Helpers\CurrencyHelper.cs" />
+    <Compile Include="Helpers\DateTimeHelpers\DateTimeHelper.cs" />
+    <Compile Include="Helpers\ParserHelper.cs" />
+    <Compile Include="Localizations\GeoHelper.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Helpers\CharHelper.cs" />
+    <Compile Include="Helpers\ListHelper.cs" />
+    <Compile Include="Helpers\NullableHelper.cs" />
+    <Compile Include="Helpers\RegexHelper.cs" />
+    <Compile Include="Helpers\RegexPatternHelper.cs" />
+    <Compile Include="Helpers\ResourceDictionaryExt.cs" />
+    <Compile Include="Helpers\SqlHelper.cs" />
+    <Compile Include="Text\StringHelper.cs" />
+    <Compile Include="Collections\RangeHelper.cs" />
+    <Compile Include="MathExtenions\FloorExt.cs" />
+    <Compile Include="MathExtenions\RoundExt.cs" />
+    <Compile Include="MathExtenions\PowerExt.cs" />
+    <Compile Include="MathExtenions\MaxExt.cs" />
+    <Compile Include="MathExtenions\MinExt.cs" />
+    <Compile Include="Normalizations\BaseNormalization.cs" />
+    <Compile Include="Normalizations\DateTimeNormalization.cs" />
+    <Compile Include="Normalizations\MoneyNormalization.cs" />
+    <Compile Include="Normalizations\NumberNormalization.cs" />
+    <Compile Include="Normalizations\TimerNormalization.cs" />
+    <Compile Include="Text\StringFormatting.cs" />
+    <Compile Include="Normalizations\TitleNormalization.cs" />
+    <Compile Include="Collections\PartialComparer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\PropertyCopy.cs" />
+    <Compile Include="Helpers\StaticRandom.cs" />
+    <Compile Include="Text\UnicodeRange.cs" />
+    <Compile Include="Text\Utf32String.cs" />
+    <Compile Include="Threading\BufferAcquisitionException.cs" />
+    <Compile Include="Threading\CachingBufferManager.cs" />
+    <Compile Include="Threading\ComparisonComparer.cs" />
+    <Compile Include="Threading\CustomThreadPool.cs" />
+    <Compile Include="Threading\Delegates.cs" />
+    <Compile Include="Threading\LockOrderException.cs" />
+    <Compile Include="Threading\LockTimeoutException.cs" />
+    <Compile Include="Threading\LockToken.cs" />
+    <Compile Include="Threading\OrderedLock.cs" />
+    <Compile Include="Threading\RandomAccessQueue.cs" />
+    <Compile Include="Threading\SyncLock.cs" />
+    <Compile Include="Threading\ThreadController.cs" />
+    <Compile Include="Threading\ThreadPoolWorkItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
